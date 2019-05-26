@@ -1,3 +1,6 @@
+# Created by Ridwan Afwan Karim Fauzi
+# https://www.github.com/ridwanakf
+
 import random
 
 def train_test_split(X, y, split_size):
@@ -45,7 +48,7 @@ def accuracy_test(true_label, prediction):
     '''
 
     if len(true_label) != len(prediction):
-        print('Panjang list tidak sama!')
+        print('Vectors are not in the same length!')
         return
 
     n_true = 0
@@ -53,6 +56,6 @@ def accuracy_test(true_label, prediction):
         if true_label[i] == prediction[i]:
             n_true += 1
 
-    accuracy = (n_true / len(prediction)) * 100
+    accuracy = (n_true / len(prediction))
 
     return accuracy

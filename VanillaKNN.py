@@ -34,7 +34,7 @@ class VanillaKNN():
                 self.k_list_y[index_max] = i
 
         # get all classes of nearest neighbors
-        y_predict = [y_train[self.k_list_y[i]]
+        y_predict = [self.y_train[self.k_list_y[i]]
                      for i in range(len(self.k_list_y))]
 
         # count for the most appeared class
@@ -44,7 +44,7 @@ class VanillaKNN():
         # if all of the nearest classes are unique, get the closest one
         if len(set(y_predict)) == self.num_of_k:
             index_min = self.k_list_x.index(min(self.k_list_x))
-            return y_train[self.k_list_y[index_min]]
+            return self.y_train[self.k_list_y[index_min]]
         else: # else got the most appeared class
             return predicted[1]
 
