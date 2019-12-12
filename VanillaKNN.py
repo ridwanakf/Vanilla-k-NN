@@ -1,6 +1,8 @@
 # Created by Ridwan Afwan Karim Fauzi
 # https://www.github.com/ridwanakf
 
+import math
+
 class VanillaKNN():
     def fit(self, X_train, y_train, num_of_k=1):
         self.X_train = X_train
@@ -56,4 +58,4 @@ class VanillaKNN():
         distance = 0
         for i in range(len(a)):
             distance += pow((a[i] - b[i]), 2)
-        return distance
+        return math.sqrt(distance)
